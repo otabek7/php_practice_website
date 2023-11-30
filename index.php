@@ -6,13 +6,32 @@
     <title>Demo</title>
 </head>
 
+
+<style>
+    body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: sans-serif;
+    }
+</style>
+
 <body>
 
+    <?php
+    $name = "Dark Matter";
+    $read = true;
+
+    if ($read) {
+        $message = "You have read $name";
+    } else {
+        $message = "You have not read $name";
+    }
+    ?>
+
     <h1>
-        <?php
-            $greeting = "Hello";
-            echo $greeting. "World";
-        ?>
+        <?= $message ?>
     </h1>
 
 </body>
